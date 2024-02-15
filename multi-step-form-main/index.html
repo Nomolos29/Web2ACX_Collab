@@ -5,53 +5,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js"></script>
   <title>Frontend Mentor | Multi-step form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
+<body class="flex center column">
+  <main class="main-container flex">
+    <!-- Sidebar start -->
+    <nav class="flex column">
+      <ul class="flex column">
+        <li class="option flex">
+          <span class="option-no active">1</span>
+          <div class="option-content">
+            <p>Step 1</p>
+            <h3>Your info</h3>
+          </div>
+        </li>
+        <li class="option flex">
+          <span class="option-no">2</span>
+          <div class="option-content">
+            <p>Step 2</p>
+            <h3>Select plan</h3>
+          </div>
+        </li>
+        <li class="option flex">
+          <span class="option-no">3</span>
+          <div class="option-content">
+            <p>Step 3</p>
+            <h3>Add-ons</h3>
+          </div>
+        </li>
+        <li class="option flex">
+          <span class="option-no">4</span>
+          <div class="option-content">
+            <p>Step 4</p>
+            <h3>Summary</h3>
+          </div>
+        </li>
+      </ul>
+    </nav>
+      <!-- Sidebar end -->
 
-  <!-- Sidebar start -->
+    <div class="main-form-section flex column">
+      <div class="form-section-container">
+        <section>
+          <!-- Step 1 start -->
+          <div class="section-title">
+            <h1>Personal info</h1>
+            <h4>Please provide your name, email address, and phone number.</h4>
+          </div>
+          <div class="main-form">
+            <form class="flex column">
+              <div>
+                <div class="label flex">
+                  <label for="Name">Name</label>
+                  <p class="error-message">This field is required</p>
+                </div>
+                <input type="text" name="Name" id="" placeholder="e.g. Stephen King">
+              </div>
+              <div>
+                <div class="label flex">
+                  <label for="Email Address">Email Address</label>
+                  <p class="error-message"><!--This field is required--></p>
+                </div>
+                <input type="email" name="Email Address" id="" placeholder="e.g. stephenking@lorem.com">
+              </div>
+              <div>
+                <div class="label flex">
+                  <label for="Phone Number">Phone Number</label>
+                  <p class="error-message"><!--This field is required--></p>
+                </div>
+                <input type="number" name="Phone Number" id="" placeholder="  e.g. +1 234 567 890">
+              </div>
+          
+              
+            </form>
+          </div>
+        </section>
+      </div>
+      <div class="form-nav-section flex">
+        <p class="back">Go Back</p>
+        <h4 class="btn">Next Step</h4>
+      </div>
+    </div>
+  </main>
 
-  Step 1
-  Your info
 
-  Step 2
-  Select plan
 
-  Step 3
-  Add-ons
-
-  Step 4
-  Summary
-
-  <!-- Sidebar end -->
-
-  <!-- Step 1 start -->
-
-  Personal info
-  Please provide your name, email address, and phone number.
-
-  Name
-  e.g. Stephen King
-
-  Email Address
-  e.g. stephenking@lorem.com
-
-  Phone Number
-  e.g. +1 234 567 890
-
-  Next Step
+  <!--  -->
 
   <!-- Step 1 end -->
 
   <!-- Step 2 start -->
-
+<!-- 
   Select your plan
   You have the option of monthly or yearly billing.
 
@@ -68,12 +115,12 @@
   Yearly
 
   Go Back
-  Next Step
+  Next Step -->
 
   <!-- Step 2 end -->
 
   <!-- Step 3 start -->
-
+<!-- 
   Pick add-ons
   Add-ons help enhance your gaming experience.
 
@@ -90,31 +137,31 @@
   +$2/mo
 
   Go Back
-  Next Step
+  Next Step -->
 
   <!-- Step 3 end -->
 
   <!-- Step 4 start -->
-
+<!-- 
   Finishing up
-  Double-check everything looks OK before confirming.
+  Double-check everything looks OK before confirming. -->
 
   <!-- Dynamically add subscription and add-on selections here -->
-
+<!-- 
   Total (per month/year)
 
   Go Back
-  Confirm
+  Confirm -->
 
   <!-- Step 4 end -->
 
   <!-- Step 5 start -->
-
+<!-- 
   Thank you!
 
   Thanks for confirming your subscription! We hope you have fun 
   using our platform. If you ever need support, please feel free 
-  to email us at support@loremgaming.com.
+  to email us at support@loremgaming.com. -->
 
   <!-- Step 5 end -->
   
