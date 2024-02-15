@@ -44,17 +44,18 @@
 ---------------------------------------
 */
 body {
-    background: var(--Light-blue);
+    background: var(--Magnolia);
     width: 100vw;
     height: 100vh;
 }
 .main-container {
-    width: 70%;
+    width: 66%;
     height: 80%;
     background-color: var(--White);
     padding: 10px;
     border-radius: 15px;
     flex-wrap: wrap;
+    box-shadow: 1px 2px 15px -5px var(--Light-gray);
 }
 .flex {
     display: flex;
@@ -73,15 +74,7 @@ body {
     border-radius: 10px;
     cursor: pointer;
 }
-/* 
-------------------------------------------
-========== REUSEABLE STYLING =============
-------------------------------------------
-*/
-.option,
-.btn {
-    cursor: pointer;
-}
+
 /* 
 ------------------------------------------
 ========== SIDE-BAR STYLING =============
@@ -90,7 +83,7 @@ body {
 nav {
     flex: 2;
     height: 100%;
-    background: url("/multi-step-form-main/assets/images/bg-sidebar-desktop.svg");
+    background: url("./assets/images/bg-sidebar-desktop.svg");
     background-size: cover;
     border-radius: 15px;
     padding: 30px;
@@ -143,26 +136,28 @@ section {
 ----------------------------------------------
 */
 .main-form-section {
-    flex: 6.5;
-    padding: 30px;
+    flex: 6;
+    padding: 20px;
     justify-content: space-between;
     align-items: center;
 }
 .form-section-container {
     position: relative;
-    width: 70%;
+    width: 75%;
 }
 section {
     position: absolute;
+    /* background-color: var(--Alabaster); */
 }
 
 /* 
----------------------------------
-============ MAIN FORM ==========
----------------------------------
+-----------------------------------
+============ MAIN FORM 1 ==========
+-----------------------------------
 */
 .section-title {
-    line-height: 3rem;
+    line-height: 2.3rem;
+    padding-top: 15px;
 }
 .section-title h1 {
     font-size: 38px;
@@ -183,7 +178,11 @@ input {
     font-size: 18px;
     color: var(--Light-gray);
     border: 1px solid var(--Light-gray);
-    padding-left: 15px;
+    padding: 25px 15px;
+    /* cursor: pointer; */
+}
+input:focus {
+    outline-color: var(--Marine-blue);
 }
 .label {
     justify-content: space-between;
@@ -196,11 +195,32 @@ input {
     color: var(--Strawberry-red);
 }
 form {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .form-nav-section {
     width: 70%;
     justify-content: space-between;
     align-items: center;
+}
+.back,
+.error-message {
+    visibility: hidden;
+}
+
+/* 
+------------------------------------------
+========== REUSEABLE STYLING =============
+------------------------------------------
+*/
+.option,
+.btn,
+.back,
+input {
+    cursor: pointer;
+}
+
+.show {
+    /* display: block; */
+    visibility: visible;
 }
