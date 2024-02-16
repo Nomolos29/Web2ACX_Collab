@@ -23,14 +23,14 @@
           </div>
         </li>
         <li class="option flex">
-          <span class="option-no">2</span>
+          <span class="option-no active">2</span>
           <div class="option-content">
             <p>Step 2</p>
             <h3>Select plan</h3>
           </div>
         </li>
         <li class="option flex">
-          <span class="option-no">3</span>
+          <span class="option-no active">3</span>
           <div class="option-content">
             <p>Step 3</p>
             <h3>Add-ons</h3>
@@ -85,75 +85,200 @@
           <!-- Step 1 end -->
         </section>
 
-        <section class="">
+        <section class=" show">
           <!-- Step 2 start -->
           <div class="section-title">
             <h1>Select your plan</h1>
             <h4>You have the option of monthly or yearly billing.</h4>
           </div>
+          <div class="main-form">
+            <div class="form-container-section">
+              <form class="flex section-2 show">
+                <div class="card active-card">
+                  <img src="./assets/images/icon-arcade.svg" alt="">
+
+                  <div class="card-content">
+                    <h4>Arcade</h4>
+                    <p>$9/mo</p>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <img src="./assets/images/icon-advanced.svg" alt="">
+
+                  <div class="card-content">
+                    <h4>Advanced</h4>
+                    <p>$12/mo</p>
+                  </div>
+                </div>
+                
+                <div class="card">
+                  <img src="./assets/images/icon-pro.svg" alt="">
+
+                  <div class="card-content">
+                    <h4>Pro</h4>
+                    <p>$15/mo</p>
+                  </div>
+                </div>
+              </form>
+
+              <form class="flex section-2">
+                <div class="card active-card">
+                  <img src="./assets/images/icon-arcade.svg" alt="">
+
+                  <div class="card-content">
+                    <h4>Arcade</h4>
+                    <p>$90/yr</p>
+                    <h6>2 months free</h6>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <img src="./assets/images/icon-advanced.svg" alt="">
+
+                  <div class="card-content">
+                    <h4>Advanced</h4>
+                    <p>$120/yr</p>
+                    <h6>2 months free</h6>
+                  </div>
+                </div>
+                
+                <div class="card">
+                  <img src="./assets/images/icon-pro.svg" alt="">
+
+                  <div class="card-content">
+                    <h4>Pro</h4>
+                    <p>$150/yr</p>
+                    <h6>2 months free</h6>
+                  </div>
+                </div>
+              </form>
+
+              <div class="section-2-form-toggle flex center">
+                <h4>Monthly</h4>
+                <div class="form-toggle-btn">
+                  <div class="toggle-btn"></div>
+                </div>
+                <h4>Yearly</h4>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section class="show">
+          <!-- Step 3 Starts -->
+          <div class="section-title">
+            <h1>Pick add-ons</h1>
+            <h4>Add-ons help enhance your gaming experience.</h4>
+          </div>
+
+          <div class="main-form">
+            <div class="form-container-section">
+              <form class="section-3 flex column">
+                <div class="opt-card">
+                  <div class="opt-card-container flex">
+                    <div class="flex center checkbox">
+                      <input type="checkbox" name="" id="">
+                      <div class="opt-card-content">
+                        <h4>Online service</h4>
+                        <p>Access to multiplayer games</p>
+                      </div>
+                    </div>
+                    <p>+$1/mo</p>
+                  </div>
+                </div>
+
+                <div class="opt-card">
+                  <div class="opt-card-container flex">
+                    <div class="flex center checkbox">
+                      <input type="checkbox" name="" id="">
+                      <div class="opt-card-content">
+                        <h4>Larger storage</h4>
+                        <p>Extra 1TB of cloud save</p>
+                      </div>
+                    </div>
+                    <p>+$2/mo</p>
+                  </div>
+                </div>
+                
+                <div class="opt-card">
+                  <div class="opt-card-container flex">
+                    <div class="flex center checkbox">
+                      <input type="checkbox" name="" id="">
+                      <div class="opt-card-content">
+                        <h4>Customizable Profile</h4>
+                        <p>Custom theme on your profile</p>
+                      </div>
+                    </div>
+                    <p>+$2/mo</p>
+                  </div>
+                </div>
+              </form>
+
+              <form class="section-3 flex column show">
+                <div class="opt-card">
+                  <div class="opt-card-container flex">
+                    <div class="flex center checkbox">
+                      <input type="checkbox" name="" id="">
+                      <div class="opt-card-content">
+                        <h4>Online service</h4>
+                        <p>Access to multiplayer games</p>
+                      </div>
+                    </div>
+                    <p>+$10/yr</p>
+                  </div>
+                </div>
+
+                <div class="opt-card">
+                  <div class="opt-card-container flex">
+                    <div class="flex center checkbox">
+                      <input type="checkbox" name="" id="">
+                      <div class="opt-card-content">
+                        <h4>Larger storage</h4>
+                        <p>Extra 1TB of cloud save</p>
+                      </div>
+                    </div>
+                    <p>+$20/yr</p>
+                  </div>
+                </div>
+                
+                <div class="opt-card">
+                  <div class="opt-card-container flex">
+                    <div class="flex center checkbox">
+                      <input type="checkbox" name="" id="">
+                      <div class="opt-card-content">
+                        <h4>Customizable Profile</h4>
+                        <p>Custom theme on your profile</p>
+                      </div>
+                    </div>
+                    <p>+$20/yr</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <!-- Step 4 Starts -->
+          <div class="section-title">
+            <h1>Finishing up</h1>
+            <h4>Double-check everything looks OK before confirming.</h4>
+          </div>
         </section>
       </div>
       <div class="form-nav-section flex">
-        <p class="back">Go Back</p>
+        <p class="back show">Go Back</p>
         <h4 class="btn">Next Step</h4>
       </div>
     </div>
   </main>
+<!--
 
-
-
-  <!--  -->
-
-
-
- 
+Step 4 start -->
 <!-- 
   
-  
-
-  Arcade
-  $9/mo
-
-  Advanced
-  $12/mo
-
-  Pro
-  $15/mo
-
-  Monthly
-  Yearly
-
-  Go Back
-  Next Step -->
-
-  <!-- Step 2 end -->
-
-  <!-- Step 3 start -->
-<!-- 
-  Pick add-ons
-  Add-ons help enhance your gaming experience.
-
-  Online service
-  Access to multiplayer games
-  +$1/mo
-
-  Larger storage
-  Extra 1TB of cloud save
-  +$2/mo
-
-  Customizable Profile
-  Custom theme on your profile
-  +$2/mo
-
-  Go Back
-  Next Step -->
-
-  <!-- Step 3 end -->
-
-  <!-- Step 4 start -->
-<!-- 
-  Finishing up
-  Double-check everything looks OK before confirming. -->
+   -->
 
   <!-- Dynamically add subscription and add-on selections here -->
 <!-- 
@@ -174,9 +299,9 @@
 
   <!-- Step 5 end -->
   
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>

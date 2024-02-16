@@ -1,8 +1,12 @@
+@import url('./assets/fonts/Ubuntu-Bold.ttf');
+@import url('./assets/fonts/Ubuntu-Medium.ttf');
+@import url('./assets/fonts/Ubuntu-Regular.ttf');
 * {
     box-sizing: border-box;
     border: none;
     padding: 0;
     margin: 0;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 :root {
@@ -46,11 +50,13 @@
 body {
     background: var(--Magnolia);
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
+    padding: 20px 0px;
 }
 .main-container {
     width: 66%;
-    height: 80%;
+    min-height: 80%;
     background-color: var(--White);
     padding: 10px;
     border-radius: 15px;
@@ -74,6 +80,12 @@ body {
     border-radius: 10px;
     cursor: pointer;
 }
+section,
+.section-2,
+.section-3 {
+    position: absolute;
+    visibility: hidden;
+}
 
 /* 
 ------------------------------------------
@@ -82,7 +94,7 @@ body {
 */
 nav {
     flex: 2;
-    height: 100%;
+    height: inherit;
     background: url("./assets/images/bg-sidebar-desktop.svg");
     background-size: cover;
     border-radius: 15px;
@@ -143,12 +155,13 @@ section {
 }
 .form-section-container {
     position: relative;
-    width: 75%;
+}
+.form-section-container,
+.form-nav-section {
+    width: 74%;
 }
 section {
-    position: absolute;
-    visibility: hidden;
-    /* background-color: var(--Alabaster); */
+    margin-bottom: 50px;
 }
 
 /* 
@@ -157,11 +170,11 @@ section {
 -----------------------------------
 */
 .section-title {
-    line-height: 2.3rem;
-    padding-top: 15px;
+    padding-bottom: 10px;
 }
 .section-title h1 {
     font-size: 38px;
+    line-height: 4rem;
     color: var(--Marine-blue);
 }
 .section-title h4 {
@@ -170,20 +183,26 @@ section {
     color: var(--Light-gray);
 }
 form {
-    gap: 20px;
+    row-gap: 20px;
+    column-gap: 15px;
 }
-input {
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
     width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 18px;
     color: var(--Light-gray);
-    border: 1px solid var(--Light-gray);
+    border: 0.12rem solid var(--Light-gray);
     padding: 25px 15px;
-    /* cursor: pointer; */
+    cursor: pointer;
 }
-input:focus {
-    outline-color: var(--Marine-blue);
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus {
+    outline-color: var(--Purplish-blue);
 }
 .label {
     justify-content: space-between;
@@ -196,19 +215,112 @@ input:focus {
     color: var(--Strawberry-red);
 }
 form {
-    margin-top: 20px;
+    margin: 20px 0px;
+    flex-wrap: wrap;
 }
 
 .form-nav-section {
-    width: 70%;
     justify-content: space-between;
     align-items: center;
+}
+.back:hover {
+    color: var(--Marine-blue);
 }
 .back,
 .error-message {
     visibility: hidden;
 }
+/* 
+-----------------------------------
+============ MAIN FORM 2 ==========
+-----------------------------------
+*/
+.form-container-section {
+    position: relative;
+    /* visibility: hidden; */
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    border: 1px solid var(--Light-gray);
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+}
+.card:hover,
+.active-card {
+    border-color: var(--Marine-blue);
+    transition: all ease 500ms;
+}
+.active-card {
+    background-color: var(--Alabaster);
+}
+.card img {
+    width: 40%;
+    margin-bottom: 50px;
+}
+.card-content {
+    line-height: 1.3rem;
+}
+.card h4,
+.card h6 {
+    color: var(--Marine-blue);
+}
+.section-2-form-toggle {
+    padding: 15px;
+    width: 100%;
+    margin: 30px 0px 80px 0px;
+    gap: 20px;
+    border-radius: 10px;
+    background-color: var(--Alabaster);
+}
+.form-toggle-btn {
+    width: 40px;
+    padding: 5px;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: var(--Marine-blue);
+}
+.toggle-btn {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: var(--White);
+}
+.form-toggle-btn:hover .toggle-btn {
+    transform: translateX(17px);
+    transition: all ease-in 0.32s;
+}
 
+/* 
+-----------------------------------
+============ MAIN FORM 3 ==========
+-----------------------------------
+*/
+.section-3 {
+    gap: 15px;
+}
+.opt-card {
+    border: 0.12rem solid var(--Light-gray);
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+}
+.checkbox {
+    gap: 20px;
+}
+.opt-card-container {
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+}
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+}
 /* 
 ------------------------------------------
 ========== REUSEABLE STYLING =============
@@ -224,5 +336,6 @@ input {
 .show {
     /* display: block; */
     visibility: visible;
+    position: relative;
     z-index: 2;
 }
