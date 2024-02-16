@@ -147,6 +147,7 @@ section {
 }
 section {
     position: absolute;
+    visibility: hidden;
     /* background-color: var(--Alabaster); */
 }
 
@@ -223,4 +224,5 @@ input {
 .show {
     /* display: block; */
     visibility: visible;
+    z-index: 2;
 }
