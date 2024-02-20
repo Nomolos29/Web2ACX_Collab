@@ -396,6 +396,7 @@ input {
     position: relative;
     z-index: 2;
 }
+
 .opt-card:hover,
 .checked {
     border-color: var(--Marine-blue);
@@ -403,3 +404,57 @@ input {
 .checked {
     background-color: var(--Magnolia);
 }
+
+
+@media screen and (max-width: 800px) {
+    body {
+        position: relative;
+    }
+    .flex column{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-image: url("./assets/images/bg-sidebar-mobile.svg");
+        flex-direction: row;
+        height: 300px;
+        background-size: cover;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: center;
+        z-index: 1;
+    }
+    .option-content{
+        display: none;
+    }
+    .show{
+        position: absolute;
+        top: 15%;
+        max-width: 375px;
+        background-color: white;
+    }
+    .main-form-section flex column{
+        padding: 2rem;
+    }
+    .btns{
+        position: fixed;
+        bottom: 0;
+        background-color: white;
+        right: 0;
+        left: 0;
+        height: 100px;
+        padding-inline: 1rem;
+    }
+    .btn{
+        margin: auto 0 auto auto;
+    }
+    .main-form{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .attribution{
+        position: fixed;
+        width: 100%;
+    }
+}
+
