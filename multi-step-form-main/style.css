@@ -56,7 +56,8 @@ body {
 }
 .main-container {
     width: 66%;
-    min-height: 80%;
+    height: auto;
+    min-height: 80vh;
     background-color: var(--White);
     padding: 10px;
     border-radius: 15px;
@@ -82,7 +83,8 @@ body {
 }
 section,
 .section-2,
-.section-3 {
+.section-3,
+.section-4 {
     position: absolute;
     visibility: hidden;
 }
@@ -189,7 +191,8 @@ form {
 
 input[type="text"],
 input[type="tel"],
-input[type="email"] {
+input[type="email"], 
+input[type="checkbox"] {
     width: 100%;
     height: 40px;
     border-radius: 8px;
@@ -217,11 +220,6 @@ input[type="email"]:focus {
 form {
     margin: 20px 0px;
     flex-wrap: wrap;
-}
-
-.form-nav-section {
-    justify-content: space-between;
-    align-items: center;
 }
 .back:hover {
     color: var(--Marine-blue);
@@ -308,7 +306,7 @@ form {
     width: 100%;
     cursor: pointer;
 }
-.checkbox {
+.checkbox-opt {
     gap: 20px;
 }
 .opt-card-container {
@@ -319,7 +317,66 @@ form {
 input[type="checkbox"] {
     width: 20px;
     height: 20px;
-    border-radius: 15px;
+    background-color: red;
+    color: red;
+    border-color: red;
+    border: 1px solid hsl(217, 100%, 97%);
+}
+
+/* 
+-----------------------------------
+============ MAIN FORM 4 ==========
+-----------------------------------
+*/
+.result-card {
+    width: 100%;
+    background-color: var(--Magnolia);
+    padding: 25px;
+    border-radius: 10px;
+}
+.subscription {
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.4rem;
+    border-bottom: 1px solid var(--Light-gray);
+    padding-bottom: 20px;
+}
+.add-ons {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.subscription-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+    margin-bottom: 30px;
+}
+/* 
+------------------------------------------
+========== THANK YOU STYLING =============
+------------------------------------------
+*/
+.thank-you-section {
+    height: 60vh;
+}
+.thank-you-container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.4rem;
+    gap: 20px;
+    height: 100%;
+}
+/* 
+--------------------------------------------
+========== FORM FOOTER STYLING =============
+--------------------------------------------
+*/
+.form-nav-section {
+    justify-content: space-between;
+    align-items: center;
+    visibility: hidden;
 }
 /* 
 ------------------------------------------
@@ -338,4 +395,11 @@ input {
     visibility: visible;
     position: relative;
     z-index: 2;
+}
+.opt-card:hover,
+.checked {
+    border-color: var(--Marine-blue);
+}
+.checked {
+    background-color: var(--Magnolia);
 }
